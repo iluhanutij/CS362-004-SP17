@@ -13,7 +13,7 @@ void testWhoseTurn(){
 	assert (whoseTurn(&state)==2);
 	state.whoseTurn = 0;
 	assert (whoseTurn(&state)==0);
-	printf("Passed.\n");
+	printf("Test Passed.\n");
 	printf("Function whoseTurn is Working.\n");
 }
  

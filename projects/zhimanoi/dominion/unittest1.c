@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 void testIsGameOver() {
-	printf("Starting test isGameOver.\n"); 	
+	printf("Testing function: isGameOver.\n"); 	
     struct gameState state;
 	int i=0;
 	//initial state
@@ -22,20 +22,20 @@ void testIsGameOver() {
 		state.supplyCount[i] = 1;
 	}
 	// Check case if game is over
-	printf("Start to check the over state.\n"); 
+	printf("Checking the over state.\n"); 
     state.supplyCount[province] = 0;
     assert (isGameOver(&state) == 1);
 	printf("Passed.\n");
 	// Check case if game still ongoing
-	printf("Start to check the ongoing state.\n"); 
+	printf("Checking the ongoing state\n"); 
 	state.supplyCount[province] = 3;
 	assert (isGameOver(&state) == 0);
 	for (i=0; i<3; i++){
 		state.supplyCount[i] = 0;
 	}
 	assert (isGameOver(&state) == 1);
-	printf("Passed.\n");
-	printf("Function isGameOver is Working\n");
+	printf("TEST SUCCESSFULLY COMPLETED\n");
+	printf("Function isGameOver is Working properly\n");
 
 }
 

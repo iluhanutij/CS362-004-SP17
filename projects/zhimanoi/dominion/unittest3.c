@@ -23,8 +23,8 @@ void testNumHandCards() {
 	assert (numHandCards(&state) == 1);
 	state.whoseTurn = 2;
 	assert (numHandCards(&state) == 2);
-	printf("Passed.\n");
-	printf("Function numHandCards is working.\n");
+	printf("Test Passed.\n");
+	printf("Function numHandCards is working properly.\n");
 }
 
 int main() {

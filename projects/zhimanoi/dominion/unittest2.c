@@ -23,7 +23,7 @@ int main()
 				  sameCard++;
 
 	assert(sameCard != state.deckCount[0]);
-	printf("Passed.\n");
+	printf("Test Passed.\n");
 	printf("The number of same card positions is: %d\n", sameCard);
 	printf("Function shuffle is working.\n");
 }
