@@ -1,5 +1,30 @@
 CFLAGS = -Wall -fpic -coverage -lm
 
+adventurer:
+        gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
+
+runAdventurer: adventurer
+        ./randomtestadventurer &> randomtestadventurer.out
+        gcov dominion.c >> randomtestadventurer.out
+        cat dominion.c.gcov >> randomtestadventurer.out
+
+randomtestcard1:
+        gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard1.c rngs.c -o randomtestcard1 -lm -g
+
+runRandomtestcard1: randomtestcard1
+        ./randomtestcard1 &> randomtestcard1.out
+        gcov dominion.c >> randomtestcard.out
+        cat dominion.c.gcov >> randomtestcard1.out
+
+randomtestcard2:
+        gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard2.c rngs.c -o randomtestcard2 -lm -g
+
+runRandomtestcard2: randomtestcard2
+        ./randomtestcard2 &> randomtestcard2.out
+        gcov dominion.c >> randomtestcard2.out
+        cat dominion.c.gcov >> randomtestcard2.out
+
+
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
 
