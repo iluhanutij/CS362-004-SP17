@@ -1,0 +1,19 @@
+Bug Report 1
+line 1006: Coin add bug
+Because coin is going to cleaned after each turn, so state->coin = stat->coin + # won't work.
+Fixing it by changing the line to bounos += #.
+
+
+
+
+Bug Report 2
+line 440 and 451: garden card 
+The way to use full deck count is wong, because it will count the curse. 
+Fixing it by changing score += (state->handCount[player] + state->deckCount[player] + state->discardCount[player]);
+
+
+
+
+Bug Report 3 
+Line 451: score from deck
+In the loop, the upper bound should be state->deckCount istead of discardCount.
